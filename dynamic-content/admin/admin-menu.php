@@ -1,4 +1,4 @@
-<?php // Custom Stylesheet Admin Menu
+<?php // DMC Admin Menu
 
 // Exit if accessed directly
 if (!defined('ABSPATH')) {
