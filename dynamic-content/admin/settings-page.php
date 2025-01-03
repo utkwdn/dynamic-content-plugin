@@ -1,4 +1,4 @@
-<?php // Custom Stylesheet Settings Page
+<?php // DMC Settings Page
 
 // Exit if accessed directly
 if (!defined('ABSPATH')) {
