@@ -1,0 +1,12 @@
+.wp-block-post-content>.dynamic-content-wrapper:last-child {
+    margin-bottom: 0!important;
+}
+
+.utkwds-text-media-bg-texture:last-child {
+    margin-bottom: 0 !important; 
+}
+
+.has-global-padding > .wp-block-utk-dynamic-content-section > .alignfull {
+    margin-right: calc(var(--wp--style--root--padding-right) * -1);
+    margin-left: calc(var(--wp--style--root--padding-left) * -1);
+}

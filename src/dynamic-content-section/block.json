@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "utk/dynamic-content-section",
+	"version": "0.1.0",
+	"title": "Dynamic Content Section",
+	"category": "widgets",
+	"icon": "editor-code",
+	"description": "Conditionally displayed content",
+	"parent": ["utk/dynamic-content-wrapper"],
+	"example": {},
+	"supports": {
+		"html": false,
+		"innerBlocks": true
+	},
+	"attributes": {
+		"dynamicKey": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "dynamic-content-plugin",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

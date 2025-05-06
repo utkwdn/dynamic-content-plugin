@@ -1,0 +1,21 @@
+.wp-block-utk-dynamic-content-section {
+    min-height: 100px;
+    border: 1px dashed;
+    padding: 20px;
+
+	&:not(:first-of-type) {
+		margin-top: 30px;
+	}
+
+	> .block-editor-inner-blocks {
+		margin-block-start: 0;
+	}
+}
+
+p.section-begin-text {
+    position: relative;
+    display: inline;
+    top: -36px;
+    background: white;
+    padding: 0 10px;
+}

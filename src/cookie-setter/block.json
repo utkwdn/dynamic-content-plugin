@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "utk/cookie-setter",
+	"version": "0.1.0",
+	"title": "Cookie Setter",
+	"category": "widgets",
+	"icon": "admin-generic",
+	"description": "Sets a cookie when the page loads",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+    "attributes": {
+        "cookieKey": {
+            "type": "string",
+            "default": "utk-dmc"
+        },
+        "cookieValue": {
+            "type": "string",
+            "default": ""
+        }
+    },
+	"textdomain": "dynamic-content-plugin",
+	"editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "render": "file:./render.php"
+}
