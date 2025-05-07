@@ -1,5 +1,5 @@
 === Dynamic Content ===
-Contributors:      The WordPress Contributors
+Contributors:      UT OCM
 Tags:              block
 Tested up to:      6.7
 Stable tag:        0.1.0
