@@ -4,7 +4,7 @@ import save from './save';
 import './style.scss';
 import './editor.scss';
 
-registerBlockType('utk/dynamic-content-wrapper', {
+registerBlockType( 'utk/dynamic-content-wrapper', {
 	edit: Edit,
 	save,
-});
+} );

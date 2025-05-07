@@ -1,7 +1,7 @@
-import { registerBlockType } from "@wordpress/blocks";
-import Edit from "./edit";
-import "./editor.scss";
+import { registerBlockType } from '@wordpress/blocks';
+import Edit from './edit';
+import './editor.scss';
 
-registerBlockType("utk/cookie-setter", {
-  edit: Edit,
-});
+registerBlockType( 'utk/cookie-setter', {
+	edit: Edit,
+} );

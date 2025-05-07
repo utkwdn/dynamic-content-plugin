@@ -11,18 +11,18 @@
 	"supports": {
 		"html": false
 	},
-    "attributes": {
-        "cookieKey": {
-            "type": "string",
-            "default": "utk-dmc"
-        },
-        "cookieValue": {
-            "type": "string",
-            "default": ""
-        }
-    },
+	"attributes": {
+		"cookieKey": {
+			"type": "string",
+			"default": "utk-dmc"
+		},
+		"cookieValue": {
+			"type": "string",
+			"default": ""
+		}
+	},
 	"textdomain": "dynamic-content-plugin",
 	"editorScript": "file:./index.js",
-    "editorStyle": "file:./index.css",
-    "render": "file:./render.php"
+	"editorStyle": "file:./index.css",
+	"render": "file:./render.php"
 }

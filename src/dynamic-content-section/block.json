@@ -7,7 +7,7 @@
 	"category": "widgets",
 	"icon": "editor-code",
 	"description": "Conditionally displayed content",
-	"parent": ["utk/dynamic-content-wrapper"],
+	"parent": [ "utk/dynamic-content-wrapper" ],
 	"example": {},
 	"supports": {
 		"html": false,

@@ -1,6 +1,6 @@
 <?php
 /**
- * Render callback for the Dynamic Content Section block.
+ * Render callback for the Dynamic Content Wrapper block.
  */
 
  if (!function_exists('get_dmc_value')) {
@@ -32,6 +32,7 @@ if ( ! function_exists( 'render_dynamic_content_wrapper' ) ) {
 		$default_section = null;
 		$rendered_content = '';
 
+		// Loop through each dynamic content section block
 		foreach ( $parsed['innerBlocks'] as $section ) {
 			if (
 				isset( $section['blockName'] ) &&
@@ -44,6 +45,7 @@ if ( ! function_exists( 'render_dynamic_content_wrapper' ) ) {
 					break;
 				}
 
+				// Save default content for fallback
 				if ( $section['attrs']['dynamicKey'] === 'default' ) {
 					$default_section = $section;
 				}
