@@ -10,7 +10,8 @@
 	"example": {},
 	"supports": {
 		"html": false,
-		"innerBlocks": true
+		"innerBlocks": true,
+		"align": true
 	},
 	"textdomain": "dynamic-content-plugin",
 	"editorScript": "file:./index.js",

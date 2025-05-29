@@ -60,7 +60,10 @@ if ( ! function_exists( 'render_dynamic_content_wrapper' ) ) {
 			$rendered_content = '<p>No content found for key: ' . esc_html( $target_key ) . '</p>';
 		}
 
-		return '<div class="dynamic-content-wrapper alignfull has-global-padding">' . $rendered_content . '</div>';
+		// Add align class if alignment is set (e.g., alignwide, alignfull)
+		$align_class = isset( $attributes['align'] ) ? 'align' . sanitize_html_class( $attributes['align'] ) : '';
+
+		return '<div class="dynamic-content-wrapper ' . esc_attr( $align_class ) . '">' . $rendered_content . '</div>';
 	}
 }
 
