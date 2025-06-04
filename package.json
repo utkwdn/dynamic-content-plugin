@@ -2,7 +2,7 @@
 	"name": "dynamic-content-plugin",
 	"version": "0.1.0",
 	"description": "Swap out content blocks based on url parameters or cookies",
-	"author": "The WordPress Contributors",
+	"author": "The University of Tennessee, Knoxville",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
