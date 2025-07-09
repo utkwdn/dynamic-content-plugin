@@ -11,7 +11,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       dynamic-content-plugin
  *
- * @package Utk
+ * @package DynamicContent
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
