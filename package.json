@@ -1,9 +1,10 @@
 {
 	"name": "dynamic-content-plugin",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "Swap out content blocks based on url parameters or cookies",
 	"author": "The University of Tennessee, Knoxville",
 	"license": "GPL-2.0-or-later",
+	"homepage": "https://github.com/utkwdn/dynamic-content-plugin",
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build --webpack-copy-php --blocks-manifest",
