@@ -1,19 +1,28 @@
 <?php
 /**
  * Render callback for the Dynamic Content Wrapper block.
+ *
+ * @package DynamicContent
  */
 
 if ( ! function_exists( 'get_dmc_value' ) ) {
+	/**
+	 * Get the dynamic content key from URL param or cookie.
+	 *
+	 * @return string The sanitized dynamic key value.
+	 */
 	function get_dmc_value() {
 		// Check URL params first.
 		if ( isset( $_GET['dmc'] ) ) {
-			return sanitize_text_field( $_GET['dmc'] );
+			return sanitize_text_field( wp_unslash( $_GET['dmc'] ) );
 		}
 
 		// Next, check cookies.
 		if ( isset( $_COOKIE['utk-dmc'] ) ) {
-			// Decode the value before sanitizing.
-			return sanitize_text_field( urldecode( $_COOKIE['utk-dmc'] ) );
+			// Unslash and decode the value before sanitizing.
+			$raw_cookie_value = wp_unslash( $_COOKIE['utk-dmc'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$decoded_value    = urldecode( $raw_cookie_value );
+			return sanitize_text_field( $decoded_value );
 		}
 
 		return 'default';
@@ -21,6 +30,14 @@ if ( ! function_exists( 'get_dmc_value' ) ) {
 }
 
 if ( ! function_exists( 'render_dynamic_content_wrapper' ) ) {
+	/**
+	 * Render the Dynamic Content Wrapper block.
+	 *
+	 * @param array  $attributes Block attributes.
+	 * @param string $content    Block content.
+	 * @param object $block      Block instance.
+	 * @return string Rendered HTML.
+	 */
 	function render_dynamic_content_wrapper( $attributes, $content, $block ) {
 		$target_key = get_dmc_value();
 		$parsed     = $block->parsed_block;
@@ -36,7 +53,7 @@ if ( ! function_exists( 'render_dynamic_content_wrapper' ) ) {
 		foreach ( $parsed['innerBlocks'] as $section ) {
 			if (
 				isset( $section['blockName'] ) &&
-				$section['blockName'] === 'utk/dynamic-content-section' &&
+				'utk/dynamic-content-section' === $section['blockName'] &&
 				isset( $section['attrs']['dynamicKey'] )
 			) {
 				if ( $section['attrs']['dynamicKey'] === $target_key ) {
@@ -46,7 +63,7 @@ if ( ! function_exists( 'render_dynamic_content_wrapper' ) ) {
 				}
 
 				// Save default content for fallback.
-				if ( $section['attrs']['dynamicKey'] === 'default' ) {
+				if ( 'default' === $section['attrs']['dynamicKey'] ) {
 					$default_section = $section;
 				}
 			}
@@ -68,4 +85,4 @@ if ( ! function_exists( 'render_dynamic_content_wrapper' ) ) {
 }
 
 // Output the rendered HTML.
-echo render_dynamic_content_wrapper( $attributes, $content, $block );
+echo wp_kses_post( render_dynamic_content_wrapper( $attributes, $content, $block ) );
