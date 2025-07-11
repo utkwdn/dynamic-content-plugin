@@ -4,7 +4,7 @@ export default function Edit() {
 	return (
 		<div
 			{ ...useBlockProps( {
-				className: 'dynamic-content-wrapper alignfull',
+				className: 'dynamic-content-wrapper',
 			} ) }
 		>
 			<p className="wrapper-begin-text">BEGIN DYNAMIC CONTENT</p>
