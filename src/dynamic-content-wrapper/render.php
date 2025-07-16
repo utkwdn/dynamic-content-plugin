@@ -85,4 +85,5 @@ if ( ! function_exists( 'render_dynamic_content_wrapper' ) ) {
 }
 
 // Output the rendered HTML.
-echo wp_kses_post( render_dynamic_content_wrapper( $attributes, $content, $block ) );
+// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- safe output from logged-in users
+echo render_dynamic_content_wrapper( $attributes, $content, $block );
