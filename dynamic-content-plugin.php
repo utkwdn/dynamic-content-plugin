@@ -3,7 +3,7 @@
  * Plugin Name:       Dynamic Content
  * Plugin URI:        https://github.com/utkwdn/dynamic-content-plugin
  * Description:       Swap out content blocks based on url parameters or cookies
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            The University of Tennessee, Knoxville
